@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="549.0" prefWidth="834.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.stockmanagementsystem.LoginController">
+   <stylesheets>
+      <URL value="@stockmanagementsystem.styling/LoginDesign.css" />
+   </stylesheets>
+   <right>
+      <AnchorPane prefHeight="540.0" prefWidth="430.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label alignment="CENTER" layoutX="65.0" layoutY="71.0" prefHeight="30.0" prefWidth="313.0" text="Welcome back!" textFill="#4e4e4e">
+               <font>
+                  <Font name="Thoma" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7263157963752747" green="0.7263157963752747" blue="0.7263157963752747" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="54.0" layoutY="180.0" text="Username">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <Label layoutX="54.0" layoutY="248.0" text="Password">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </Label>
+            <TextField fx:id="usernameField" layoutX="131.0" layoutY="177.0" prefHeight="26.0" prefWidth="222.0" promptText="Username" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #c4c4c4; -fx-padding: 5px;" />
+            <PasswordField fx:id="passwordField" layoutX="131.0" layoutY="245.0" prefHeight="26.0" prefWidth="222.0" promptText="Password" style="-fx-background-radius: 20; -fx-border-radius: 20; -fx-border-color: #c4c4c4; -fx-padding: 5px;" />
+            <Button fx:id="loginButton" layoutX="132.0" layoutY="354.0" mnemonicParsing="false" onAction="#loginButtonAction" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #263F73; -fx-background-radius: 20; -fx-text-fill: white;" text="Login" />
+            <Button fx:id="cancelButton" layoutX="175.0" layoutY="487.0" mnemonicParsing="false" onAction="#cancelButton" prefHeight="30.0" prefWidth="133.0" style="-fx-background-color: #263F73; -fx-background-radius: 20; -fx-text-fill: white;" text="Cancel" />
+            <Label fx:id="loginMessageLabel" layoutX="75.0" layoutY="116.0" prefHeight="30.0" prefWidth="284.0" textFill="#b10000">
+               <font>
+                  <Font name="System Bold" size="14.0" />
+               </font>
+            </Label>
+            <Button fx:id="createNewAccountButton" layoutX="132.0" layoutY="402.0" mnemonicParsing="false" onAction="#createNewAccountButtonAction" prefHeight="30.0" prefWidth="222.0" style="-fx-background-color: #ffffff; -fx-background-radius: 20; -fx-text-fill: #263F73; -fx-border-color: #263F73; -fx-border-radius: 20;" text="Create new account" />
+         </children>
+      </AnchorPane>
+   </right>
+   <center>
+      <AnchorPane prefHeight="550.0" prefWidth="367.0" style="-fx-background-color: #263F73;" BorderPane.alignment="CENTER">
+         <children>
+            <Label layoutX="99.0" layoutY="488.0" text="Copyright (c). All Rights Reserved" textFill="WHITE" />
+            <Circle fill="#949494" layoutX="125.0" layoutY="110.0" radius="14.0" stroke="#a4a4a4" strokeType="INSIDE">
+               <effect>
+                  <InnerShadow />
+               </effect>
+            </Circle>
+            <Circle fill="#33638f0e" layoutX="198.0" layoutY="169.0" radius="96.0" stroke="#a4a4a4" strokeType="INSIDE" />
+            <Label layoutX="160.0" layoutY="117.0" text="Stocky" textFill="WHITE">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.7368420958518982" green="0.7368420958518982" blue="0.7368420958518982" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Label layoutX="139.0" layoutY="198.0" text="Investment" textFill="WHITE">
+               <font>
+                  <Font name="Verdana Bold" size="18.0" />
+               </font>
+               <effect>
+                  <DropShadow>
+                     <color>
+                        <Color red="0.6631578803062439" green="0.6631578803062439" blue="0.6631578803062439" />
+                     </color>
+                  </DropShadow>
+               </effect>
+            </Label>
+            <Line endX="84.4000244140625" endY="-1.52587890625E-5" layoutX="199.0" layoutY="175.0" startX="-86.79998779296875" startY="-1.52587890625E-5" stroke="WHITE" strokeWidth="2.0">
+               <effect>
+                  <DropShadow />
+               </effect>
+            </Line>
+         </children>
+      </AnchorPane>
+   </center>
+</BorderPane>

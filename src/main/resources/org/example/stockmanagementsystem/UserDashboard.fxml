@@ -1,0 +1,366 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="650.0" prefWidth="1100.0" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.stockmanagementsystem.UserDashboardController">
+    <children>
+        <AnchorPane prefHeight="650.0" prefWidth="1100.0">
+            <children>
+                <BorderPane prefHeight="650.4" prefWidth="1100.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                    <left>
+                        <AnchorPane prefHeight="650.0" prefWidth="251.0" style="-fx-background-color: #263F73;" BorderPane.alignment="CENTER">
+                            <children>
+                                <Label alignment="CENTER" layoutX="13.0" layoutY="152.0" prefHeight="26.0" prefWidth="225.0" text="Welcome!" textFill="WHITE">
+                                    <font>
+                                        <Font name="Tahoma" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Label fx:id="userNameLabel" alignment="CENTER" layoutX="10.0" layoutY="194.0" prefHeight="30.0" prefWidth="232.0" text="Temp User" textAlignment="CENTER" textFill="WHITE">
+                                    <font>
+                                        <Font name="Arial" size="20.0" />
+                                    </font>
+                                </Label>
+                                <Button fx:id="myTransactionHistoryButton" layoutX="26.0" layoutY="301.0" mnemonicParsing="false" onAction="#myTransactionHistoryButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" text="My transaction history" AnchorPane.bottomAnchor="323.0">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </Button>
+                                <Button fx:id="logoutButton" layoutX="26.0" layoutY="570.0" mnemonicParsing="false" onAction="#logoutButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" text="Logout">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </Button>
+                                <StackPane layoutY="44.0" prefHeight="82.0" prefWidth="251.0" style="-fx-background-color: #17305e;">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                    <children>
+                                        <StackPane prefHeight="150.0" prefWidth="200.0">
+                                            <children>
+                                                <Label text="S tocky" textFill="#e1e1e1">
+                                                    <font>
+                                                        <Font name="System Bold" size="37.0" />
+                                                    </font>
+                                                    <effect>
+                                                        <DropShadow />
+                                                    </effect>
+                                                </Label>
+                                                <AnchorPane prefHeight="78.0" prefWidth="251.0">
+                                                    <children>
+                                                        <Circle fill="#ffffff00" layoutX="72.0" layoutY="41.0" radius="21.0" stroke="#b7b7b7" strokeType="INSIDE" strokeWidth="0.5" />
+                                                        <Circle fill="#c2c2c2db" layoutX="58.0" layoutY="27.0" radius="7.0" stroke="#c7c7c7" strokeType="INSIDE">
+                                                            <effect>
+                                                                <DropShadow />
+                                                            </effect>
+                                                        </Circle>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </StackPane>
+                                    </children>
+                                </StackPane>
+                                <Line endX="100.0" layoutX="134.0" layoutY="187.0" startX="-117.00001525878906" startY="1.52587890625E-5" stroke="#cccccc">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </Line>
+                                <Button fx:id="homeButton" layoutX="26.0" layoutY="260.0" mnemonicParsing="false" onAction="#homeButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" text="Home">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </Button>
+                        <Button fx:id="depositWithdrawAmountButton" layoutX="26.0" layoutY="382.0" mnemonicParsing="false" onAction="#depositWithdrawAmountButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" text="Deposit/Withdraw amount">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="myStocksButton" layoutX="26.0" layoutY="340.0" mnemonicParsing="false" onAction="#myStocksButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" text="My stocks ">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="stockMarketButton" layoutX="26.0" layoutY="424.0" mnemonicParsing="false" onAction="#stockMarketButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" text="Stock market">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                        <Button fx:id="myOrdersButton" layoutX="26.0" layoutY="465.0" mnemonicParsing="false" onAction="#myOrdersButtonAction" prefHeight="26.0" prefWidth="200.0" styleClass="button" stylesheets="@stockmanagementsystem.styling/AdminDashboard.css" text="My orders">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Button>
+                            </children>
+                        </AnchorPane>
+                    </left>
+                    <center>
+                        <AnchorPane prefHeight="650.0" prefWidth="849.0" BorderPane.alignment="CENTER">
+                            <children>
+                                <AnchorPane fx:id="dashboardStockPane" layoutX="10.0" layoutY="218.4" prefHeight="422.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;" visible="false">
+                                    <children>
+                                        <LineChart fx:id="recentStockChart" layoutX="14.0" layoutY="39.0" prefHeight="331.0" prefWidth="646.0">
+                                            <xAxis>
+                                                <CategoryAxis side="BOTTOM" />
+                                            </xAxis>
+                                            <yAxis>
+                                                <NumberAxis side="LEFT" />
+                                            </yAxis>
+                                        </LineChart>
+                                        <Label alignment="CENTER" layoutX="14.0" layoutY="14.0" prefHeight="32.0" prefWidth="140.0" text="Recent Stocks">
+                                            <font>
+                                                <Font name="System Bold" size="17.0" />
+                                            </font>
+                                        </Label>
+                                        <Label alignment="CENTER" layoutX="674.0" layoutY="76.0" prefHeight="18.0" prefWidth="125.0" text="Stock info">
+                                            <font>
+                                                <Font name="System Bold" size="15.0" />
+                                            </font>
+                                        </Label>
+                                        <Label layoutX="674.0" layoutY="171.0" text="Mininum price:" textFill="#ae0000">
+                                            <font>
+                                                <Font size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="minPriceLabel" layoutX="764.0" layoutY="172.0" text="99$" />
+                                        <Label layoutX="674.0" layoutY="145.0" text="Maximum price:" textFill="#007e0b">
+                                            <font>
+                                                <Font size="13.0" />
+                                            </font>
+                                        </Label>
+                                        <Label fx:id="maxPriceLabel" layoutX="773.0" layoutY="146.0" text="99$" />
+                                        <Label layoutX="674.0" layoutY="119.0" text="Stock Name:" />
+                                        <Label fx:id="stockNameLabel" layoutX="746.0" layoutY="119.0" text="APPL" />
+                                    </children>
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                </AnchorPane>
+                                <AnchorPane fx:id="userInfoPane" layoutX="10.0" layoutY="58.0" prefHeight="193.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;" visible="false" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                    <effect>
+                                        <DropShadow />
+                                    </effect>
+                                    <children>
+                                        <StackPane layoutX="28.0" layoutY="22.0" prefHeight="138.0" prefWidth="190.0" style="-fx-background-color: #e3e1e1;">
+                                            <effect>
+                                                <DropShadow />
+                                            </effect>
+                                            <children>
+                                                <AnchorPane>
+                                                    <children>
+                                                        <Label layoutX="13.0" layoutY="24.0" prefHeight="28.0" prefWidth="164.0" text="My Balance:">
+                                                            <font>
+                                                                <Font name="Tahoma" size="20.0" />
+                                                            </font>
+                                                        </Label>
+                                                        <Label fx:id="userBalanceLabel" alignment="CENTER" layoutX="11.0" layoutY="55.0" prefHeight="54.0" prefWidth="168.0" text="99" textFill="#126300">
+                                                            <font>
+                                                                <Font size="37.0" />
+                                                            </font>
+                                                        </Label>
+                                                    </children>
+                                                </AnchorPane>
+                                            </children>
+                                        </StackPane>
+                                    </children>
+                                </AnchorPane>
+                        <AnchorPane fx:id="transactionHistoryPane" layoutX="14.0" layoutY="17.0" prefHeight="621.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TableView fx:id="transactionTableView" layoutX="11.2" layoutY="39.0" prefHeight="506.0" prefWidth="807.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="11.0" AnchorPane.rightAnchor="10.0">
+                                  <columns>
+                                      <TableColumn fx:id="transactionIdColumn" prefWidth="135.5" text="transaction_id" />
+                                      <TableColumn fx:id="transactionAmountColumn" prefWidth="135.5" text="amount" />
+                                      <TableColumn fx:id="transactionTypeColumn" prefWidth="135.5" text="transaction_type" />
+                                      <TableColumn fx:id="transactionStatusColumn" prefWidth="135.5" text="status" />
+                                      <TableColumn fx:id="transactionCreatedAtColumn" prefWidth="135.5" text="created_at" />
+                                      <TableColumn fx:id="transactionUpdatedAtColumn" prefWidth="135.5" text="updated_at" />
+                                  </columns>
+                              </TableView>
+                              <TextField fx:id="transactionSearachBar" layoutX="117.0" layoutY="55.0" prefHeight="26.0" prefWidth="676.0" promptText="Keywords.." />
+                              <Label alignment="CENTER" layoutX="51.0" layoutY="59.0" prefHeight="18.0" prefWidth="65.0" text="Search" textAlignment="CENTER" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="stockMarketPane" layoutX="12.0" layoutY="6.4" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="21.0" layoutY="14.0" prefHeight="255.0" prefWidth="818.0" style="-fx-background-color: #f0f0f0;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <TextField fx:id="stockMarketSearchBar" layoutX="10.0" layoutY="20.0" prefHeight="26.0" prefWidth="464.0" promptText="Search.." />
+                                    <TableView fx:id="StockMarketTableView" layoutX="8.0" layoutY="53.0" onMouseClicked="#stockMarketTableViewMouseClicked" onSort="#stockMarketTableViewMouseClicked" prefHeight="194.0" prefWidth="818.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+                                      <columns>
+                                        <TableColumn fx:id="stockMarketStockIdColumn" prefWidth="52.79999095201492" text="stock_id" />
+                                        <TableColumn fx:id="stockMarketStockLabelColumn" prefWidth="67.20003890991211" text="label" />
+                                          <TableColumn fx:id="stockMarketCompanyNameColumn" prefWidth="129.59993743896484" text="company_name" />
+                                          <TableColumn fx:id="stockMarketInitialPriceColumn" prefWidth="70.39997863769531" text="initial_price" />
+                                          <TableColumn fx:id="stockMarketTradingPriceColumn" minWidth="8.79998779296875" prefWidth="96.79998779296875" text="trading_price" />
+                                          <TableColumn fx:id="stockMarketDividendsColumn" minWidth="0.0" prefWidth="60.79998779296875" text="dividends" />
+                                          <TableColumn fx:id="stockMarketAvailableStocksColumn" prefWidth="102.39999389648438" text="available_stocks" />
+                                          <TableColumn fx:id="stockMarketProfitPercentageColumn" prefWidth="116.00006103515625" text="profit_percentage" />
+                                          <TableColumn fx:id="stockMarketCreatedAtColumn" prefWidth="129.59991455078125" text="created_at" />
+                                      </columns>
+                                    </TableView>
+                                    <Button fx:id="stockMarketBuyButton" layoutX="694.0" layoutY="20.0" mnemonicParsing="false" onAction="#stockMarketBuyButtonAction" prefHeight="26.0" prefWidth="97.0" style="-fx-background-color: #22ba07;" text="Buy" />
+                                    <TextField fx:id="stockMarketAmountField" layoutX="589.0" layoutY="20.0" prefHeight="26.0" prefWidth="83.0" promptText="Amount" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="15.0" layoutY="268.0" prefHeight="357.0" prefWidth="818.0" style="-fx-background-color: #f0f0f0;" AnchorPane.bottomAnchor="5.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="268.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <LineChart fx:id="stockMarketChart" prefHeight="356.0" prefWidth="678.0">
+                                      <xAxis>
+                                        <CategoryAxis side="BOTTOM" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                    <Label alignment="CENTER" layoutX="698.0" layoutY="14.0" prefHeight="15.0" prefWidth="75.0" text="Stock info">
+                                       <font>
+                                          <Font name="Tahoma Bold" size="12.0" />
+                                       </font>
+                                    </Label>
+                                    <Label layoutX="684.0" layoutY="53.0" text="Stock Name:" />
+                                    <Label layoutX="684.0" layoutY="81.0" text="Min Price:" textFill="#b90d0d" AnchorPane.bottomAnchor="258.20000000000005" />
+                                    <Label layoutX="684.0" layoutY="105.0" text="Max Price:" textFill="#3e9115" />
+                                    <Label fx:id="stockMarketMinPriceLabel" layoutX="742.0" layoutY="81.0" text="Test" AnchorPane.bottomAnchor="258.20000000000005" />
+                                    <Label fx:id="stockMarketMaxPriceLabel" layoutX="750.0" layoutY="105.0" text="Label" />
+                                    <Label fx:id="stockMarketStockNameLabel" layoutX="762.0" layoutY="53.0" text="Test" />
+                                    <Button fx:id="exportToCVSButton" layoutX="700.0" layoutY="283.0" mnemonicParsing="false" onAction="#exportToCVSButtonAction" text="Export to CVS" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="myOrdersPane" layoutX="10.0" layoutY="8.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;" visible="false" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TableView fx:id="ordersTableView" layoutX="11.2" layoutY="16.8" prefHeight="606.0" prefWidth="806.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                 <columns>
+                                    <TableColumn fx:id="orderIdColumn" prefWidth="134.3" text="ID" />
+                                    <TableColumn fx:id="orderTypeColumn" prefWidth="134.3" text="Type" />
+                                    <TableColumn fx:id="orderPriceColumn" prefWidth="134.3" text="Price" />
+                                    <TableColumn fx:id="orderQuantityColumn" prefWidth="134.3" text="Quantity" />
+                                    <TableColumn fx:id="orderDateColumn" prefWidth="134.3" text="Date" />
+                                    <TableColumn fx:id="orderStatusColumn" prefWidth="134.3" text="Status" />
+                                 </columns>
+                              </TableView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="myStocksPane" layoutX="10.0" layoutY="9.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <TableView fx:id="myStocksTableView" layoutY="22.0" onMouseClicked="#myStocksTableViewOnMouseClicked" prefHeight="534.0" prefWidth="805.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="10.0">
+                                <columns>
+                                  <TableColumn fx:id="myStocksOrderIdColumn" prefWidth="134.16" text="Order ID" />
+                                  <TableColumn fx:id="myStocksStockLabelColumn" prefWidth="134.16" text="Stock Label" />
+                                    <TableColumn fx:id="myStocksCompanyNameColumn" prefWidth="134.16" text="Company Name" />
+                                    <TableColumn fx:id="myStocksStockPriceColumn" prefWidth="134.16" text="Stock Price" />
+                                    <TableColumn fx:id="myStocksAmountColumn" prefWidth="134.16" text="Amount" />
+                                    <TableColumn fx:id="myStocksOrderedAtColumn" prefWidth="134.16" text="Ordered At" />
+                                </columns>
+                              </TableView>
+                              <Button fx:id="sellStockButton" layoutX="694.0" layoutY="557.0" mnemonicParsing="false" onAction="#sellStockButtonAction" prefHeight="30.0" prefWidth="123.0" style="-fx-background-color: #0c8509;" text="Sell Stock" />
+                              <TextField fx:id="myStocksAmountField" layoutX="520.0" layoutY="557.0" prefHeight="30.0" prefWidth="162.0" promptText="Amount" />
+                              <Label fx:id="sellStockForLabel" layoutX="44.0" layoutY="563.0" />
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="depositWithdrawPane" layoutX="10.0" layoutY="9.0" prefHeight="634.0" prefWidth="828.0" style="-fx-background-color: #f0f0f0;" visible="false">
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                           <children>
+                              <AnchorPane layoutX="5.0" layoutY="186.0" prefHeight="199.0" prefWidth="818.0" style="-fx-background-color: #f0f0f0;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="4.600000000000023" AnchorPane.topAnchor="186.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <Button fx:id="depositButton" layoutX="432.0" layoutY="92.0" mnemonicParsing="false" onAction="#depositButtonAction" prefHeight="26.0" prefWidth="98.0" text="Deposit">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Button>
+                                    <Text layoutX="59.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Deposit Amount">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="depositAmountField" layoutX="243.0" layoutY="92.0" prefHeight="22.0" prefWidth="150.0" promptText="Deposit Amount" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="130.0" prefWidth="818.0" style="-fx-background-color: #f0f0f0;" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <Text layoutX="14.0" layoutY="50.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Any requests will be Approved by the Admin within 3 hours">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Text layoutX="14.0" layoutY="93.0" strokeType="OUTSIDE" strokeWidth="0.0" text="In case of you got any issue you can email us on ">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <Label layoutX="444.0" layoutY="71.0" prefHeight="30.0" prefWidth="199.0" text="service@stocky.com">
+                                       <font>
+                                          <Font name="System Bold" size="20.0" />
+                                       </font>
+                                    </Label>
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane layoutX="4.0" layoutY="420.0" prefHeight="199.0" prefWidth="818.0" style="-fx-background-color: #f0f0f0;" AnchorPane.leftAnchor="4.0" AnchorPane.rightAnchor="5.599999999999909">
+                                 <effect>
+                                    <DropShadow />
+                                 </effect>
+                                 <children>
+                                    <Button fx:id="withdrawButton" layoutX="432.0" layoutY="92.0" mnemonicParsing="false" onAction="#withdrawButtonAction" prefHeight="26.0" prefWidth="98.0" text="Withdraw">
+                                       <effect>
+                                          <Glow />
+                                       </effect>
+                                    </Button>
+                                    <Text layoutX="59.0" layoutY="112.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Withdraw Amount">
+                                       <font>
+                                          <Font size="20.0" />
+                                       </font>
+                                    </Text>
+                                    <TextField fx:id="withdrawAmountField" layoutX="243.0" layoutY="92.0" prefHeight="22.0" prefWidth="150.0" promptText="Withdraw Amount" />
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </AnchorPane>
+                            </children>
+                        </AnchorPane>
+                    </center>
+                </BorderPane>
+            </children>
+        </AnchorPane>
+    </children>
+</StackPane>

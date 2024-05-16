@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="217.0" prefWidth="407.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.stockmanagementsystem.CustomConfirmationDialogController">
+    <children>
+        <AnchorPane layoutX="0.0" layoutY="0.0" prefHeight="217.0" prefWidth="407.0">
+            <children>
+                <Label fx:id="messageLabel" alignment="CENTER" layoutX="8.0" layoutY="28.0" prefHeight="62.0" prefWidth="392.0" text="Are you sure?" textFill="#464646">
+                    <font>
+                        <Font size="22.0" />
+                    </font>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.7263157963752747" green="0.7263157963752747" blue="0.7263157963752747" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Label>
+                <Button fx:id="okButton" layoutX="41.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleOkButtonAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #263F73; -fx-background-radius: 20; -fx-text-fill: white;" text="Ok">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Button>
+                <Button fx:id="cancelButton" layoutX="248.0" layoutY="138.0" mnemonicParsing="false" onAction="#handleCancelButtonAction" prefHeight="30.0" prefWidth="120.0" style="-fx-background-color: #710808; -fx-background-radius: 20; -fx-text-fill: white;" text="Cancel" textFill="#fcfcfc">
+                    <effect>
+                        <DropShadow />
+                    </effect>
+                </Button>
+            </children>
+        </AnchorPane>
+    </children>
+</AnchorPane>
