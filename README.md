@@ -6,6 +6,13 @@
 
 The Stock Management System (Stocky) is a robust Java-based application designed to streamline stock trading, transaction management, and user account operations. It provides users with a comprehensive platform to monitor investments, execute trades, and analyze stock market data effectively.
 
+<p align="center">
+  <img src="src/main/Images/login.jfif" alt="Login">
+</p>
+<p align="center">
+  <img src="src/main/Images/userDashboard.jfif" alt="Login">
+</p>
+
 ---
 
 ## Features
@@ -18,6 +25,10 @@ Stocky offers the following key features:
 - **Transaction History**: Access detailed records of all transactions.
 - **Stock Market Information**: Analyze stock performance, dividends, and company details.
 - **Graphical User Interface (GUI)**: Intuitive interface built with JavaFX for easy navigation.
+
+<p align="center">
+  <img src="src/main/Images/adminDashboard.jfif" alt="Admin Dashboard">
+</p>
 
 ---
 
@@ -71,6 +82,10 @@ Once the application is running, follow these steps to use the Stock Management 
 2. Explore available features such as stock trading, transaction history, and stock market information.
 3. Perform buy or sell transactions based on your investment decisions.
 4. Monitor transaction history and account balance to track your investments.
+
+<p align="center">
+  <img src="src/main/Images/stockMarket.jfif" alt="Stock Market">
+</p>
 
 ---
 
